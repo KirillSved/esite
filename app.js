@@ -5,6 +5,13 @@
  import path from "path";
  import {requestTime,logger} from "./public/middleware.js"
  import dotenv from "dotenv"
+ import session from 'express-session';
+ import { authenticator } from 'otplib';
+ import QRCode from 'qrcode';
+ import jwt from 'jsonwebtoken';
+ import expressJWT from 'express-jwt';
+ import bodyParser from 'body-parser';
+ import {auth} from './routers/auth.js';
  //import { createRequire } from 'module';
  dotenv.config();
   //const require = createRequire(import.meta.url);
@@ -23,6 +30,7 @@ app.set("view engine", "ejs")
 app.set("views", path.resolve(__dirname,"ejs"))
 console.log(app.get("views"))
 const PORT = process.env.PORT ?? 3006
+app.use("/login", auth)
 app.use(express.json()) // для роботы с json 
 app.use(express.urlencoded({ extended: false }));// Тоже для работы с json
 app.use(function(req, res, next) {

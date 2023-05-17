@@ -1,13 +1,13 @@
  import {Router} from "express";
  import {con as connection} from "../rest/db_con.js";
- import  auth from "../rest/auth.js"
+ import  {auth as auth} from "../rest/auth.js";
  import bcrypt from "bcryptjs"
  import { createRequire } from 'module';
  //const require = createRequire(import.meta.url);
  const router = Router();
  //const addLog = require('../code/logs').add
 router.get("/", function (req,res,next){
-    res.render("takeAuth")
+    res.render("takeAuth",{title:"Login"})
 })
 
 router.post("/login", async(req,res,next)=>{
@@ -58,4 +58,4 @@ router.post("/check",(req,res)=>{
       res.status(500).send(error)
   })  
 })
-export{router}
+export{router as auth}

@@ -17,7 +17,7 @@ router.get("/",(req,res)=>{
  // res.send("<h1> Its test-express Server </h1>") ------->
   //  res.render("index",{title:"Home Page",active:"Home"});
   //  console.log(req.requestTime)
-  res.render("index",{title:"Home"})
+  res.render("index",{title:"Home",active:"Home"})
 })
 
 router.get("/welcome",(req,res)=>{
