@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%-include("./partials/header")%>
+   <link rel="stylesheet" href="/css/welcome.css">
+  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <%-include("./partials/navbar");%>
+    <div class="conteiner"> 
+
+
+        <h1>First something</h1>
+        
+        <div id="app" >
+          <!--FORM TO CHANGE PANGE-->
+          <form @submit.prevent="createServer">
+          <div> 
+            <div class="row justify-content-md-center">
+              <div class="col-3 col-md-2">
+                <input type="text" class="form-control" placeholder="Name" aria-label="Имя" v-model="name">
+              </div>
+              <div class="col-3 col-md-2">
+                <input type="text" class="form-control" placeholder="Status" aria-label="Фамилия" v-model="status">
+              </div>
+              <div class="col-2 col-lg-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+            <br>
+          </div>
+        </form>
+
+          <div class="row ">
+       <!--Server generated data-->
+       
+             <div class="col-4 col-md-2 m-3"> 
+              <div class="spinnerCon" v-if="servers.length=='undefined'?servers.length ==0:2>servers.id">
+                <div class="myspinner"  align="center">
+                  <div  role="status"></div>
+                  <div role="status"></div>
+                  <div  role="status"></div>
+                  <div  role="status"></div>
+                </div>
+              </div>
+
+                 <ul class="list-group" v-else>
+            
+                   <li class="list-group-item" v-for="server in servers.data"><text style="color: blue;">Name:=></text>{{server.name}}
+                   <br> <strong>Status::{{server.status}}</strong>
+                  </li>
+                </ul>
+            </div>
+             <!--User generated data-->
+            <div class="col-4 col-md-2 m-3" align="center" >
+              <!-- <ul class="list-group"> -->
+                <div class="spinners" role="status" v-if="2>userServers.id">
+                  <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Загрузка...</span>
+                  </div>
+                </div>
+                <ul class="list-group" v-else>
+                <!-- <div class="shadow-lg p-3 mb-5 bg-body rounded" v-else> -->
+                  <li class="list-group-item " v-for="server in userServers.data" @click="remove(server.id)">
+                    <text style="color:green;">Name:=></text>{{server.name}}
+                   <br>
+                  <strong>Status::{{server.status}}</strong>
+                </li>
+                <!-- </div> -->
+              </ul>  
+
+              </div>
+      
+     </div>
+     </div>
+        </div>
+
+        <div class="conteiner">
+          <div class="row">
+
+            <div class="col m-3">
+              <form action="/vue">
+               <button type="submit" class="forvue-btn">  GoTestVue </button>
+              </form>
+            </div>
+
+            <div class="col">
+              <button id="Cteatebutton" class="btn btn-success"> CreTe toasts  </button>
+          </div>
+          
+          </div>
+        </div>
+    
+            
+            <script src="/app_wait.js"></script>
+            <%-include("./partials/scripts") %>
+            <script src="https://kit.fontawesome.com/1236b9c95c.js" crossorigin="anonymous"></script>
+</body>
+</html>

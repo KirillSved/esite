@@ -1,0 +1,22 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Custom.scss
+// Вариант Б. Включите части Bootstrap
+
+// 1. Сначала включите функции (чтобы Вы могли управлять цветами, SVG, вычислением и т.д.)
+// @import "../node_modules/bootstrap/scss/functions";
+
+// // 2. Включите сюда любые переопределения переменных по умолчанию
+
+// // 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
+
+// // 4. Включите любые дополнительные компоненты Bootstrap, как Вам нравится
+// @import "../node_modules/bootstrap/scss/root";
+// @import "../node_modules/bootstrap/scss/reboot";
+// @import "../node_modules/bootstrap/scss/type";
+// @import "../node_modules/bootstrap/scss/images";
+// @import "../node_modules/bootstrap/scss/containers";
+// @import "../node_modules/bootstrap/scss/grid";
+
+// 5. Добавьте сюда дополнительный пользовательский код

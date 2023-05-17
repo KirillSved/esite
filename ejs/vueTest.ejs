@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <%-include("./partials/header")%>
+  <link rel="stylesheet" href="/css/my.css">
+</head>
+<body>
+<div class="conteiner">
+  <div class="spinner-grow " style="text-align: center;" role="status">
+    <span class="visually-hidden">Data cteating</span>
+  </div>
+</div>
+  
+<div class="conteiner">
+  <div id="app">
+   <strong> {{ servers }} </strong> 
+  </div>
+  <div class="conteiner">
+    <div class="row"> 
+      <div class="col">
+    <pre>
+      <a href="/" class="floating-button">Home</a>
+    </pre>
+    </div>
+      
+
+    <div class="col">
+      <div class="button-wrapper">
+        <a href="/vue" class="arrow-btn">Выбрать<span></span></a>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="conteiner">
+  <div class="spinner-grow m-3 p-3" style="text-align: center;" role="status">
+    <span class="visually-hidden">Data cteating</span>
+  </div>
+</div>
+
+
+  <script>
+const App ={
+    data(){
+        return{
+            servers:[],
+            userServer:[]
+        }
+    },
+    async mounted(){
+        const res = await fetch("/api/server")
+        let servers = await res.json()
+  this.servers = servers.serverses
+        console.log(servers)
+        
+    }
+} ;
+Vue.createApp(App).mount('#app')
+  </script>
+  <%-include("./partials/scripts")%>
+
+
+</body>
+</htm

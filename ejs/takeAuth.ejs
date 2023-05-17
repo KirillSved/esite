@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%-include("./partials/header")%>
+</head>
+<body>
+    <div class="conteiner-fluid"></div>
+
+<div class="row">
+    <div class="col-md-12 min-vh-50 d-flex flex-column justify-content-center" style="padding-top: 80px">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <div class="card rounded shadow shadow-sm">
+            <div class="card-header">
+              <h3 class="mb-0"> </h3>
+            </div>
+            <div class="card-body">
+              <form class="form" id="formLogin" role="form" autocomplete="off" novalidate="novalidate" method="POST">
+                <div class="form-group">
+                  <label> </label>
+                  <input class="form-control form-control-lg rounded-0" id="login" required="required"/>
+                  <label> </label>
+                  <input class="form-control form-control-lg rounded-0" id="password" placeholder="pass" type="password" requireds="requireds"/>
+                </div>
+                <div class="btn btn-success btn-lg float-right">something</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">           
+    <footer class="mastfoot mt-auto" style="clear: both; margin: 0 auto; text-align: center;">
+      <div class="inner">
+        <p></p>
+        <p></p>
+      </div>
+    </footer>
+  </div>
+  <%-include("./partials/scripts")%>
+  
+</body>
+
+</html>

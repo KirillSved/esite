@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%-include("./partials/header")%>
+</head>
+<body>
+ 
+<div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-2">
+        1 из 3
+      </div>
+      <div class="col-md-auto">
+        Переменная ширина контента
+      </div>
+      <div class="col col-lg-2">
+        3 из 3
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 из 3
+      </div>
+      <div class="col-md-auto">
+        Переменная ширина контента
+      </div>
+      <div class="col col-lg-2">
+        3 из 3
+      </div>
+    </div>
+  </div><div class="container">
+    <!-- Сложите колонки на мобильном устройстве, сделав одну полную, а другую половинную -->
+    <div class="row">
+      <div class="col-md-8">.col-md-8</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+  
+    <!-- Ширина колонок начинается с 50% на мобильных устройствах и увеличивается до 33,3% на компьютерах. -->
+    <div class="row">
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+  
+    <!-- колонки всегда имеют ширину 50% на мобильных и настольных компьютерах. -->
+    <div class="row">
+      <div class="col-6">.col-6</div>
+      <div class="col-6">.col-6</div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        1 из 2
+      </div>
+      <div class="col">
+        2 из 2
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 из 3
+      </div>
+      <div class="col">
+        2 из 3
+      </div>
+      <div class="col">
+        3 из 3
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <!-- Сложите колонки на мобильном устройстве, сделав одну полную, а другую половинную -->
+  <div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  </div>
+
+  <!-- Ширина колонок начинается с 50% на мобильных устройствах и увеличивается до 33,3% на компьютерах. -->
+  <div class="row">
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  </div>
+
+  <!-- колонки всегда имеют ширину 50% на мобильных и настольных компьютерах. -->
+  <div class="row">
+    <div class="col-6">.col-6</div>
+    <div class="col-6">.col-6</div>
+  </div>
+</div>
+
+  <%-include("./partials/scripts") %>
+</body>
+</html>

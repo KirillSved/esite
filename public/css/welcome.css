@@ -1,0 +1,164 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); */
+
+body {
+    background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+    /* font-family: 'Handlee', cursive; */
+    -webkit-font-smoothing:antialiased;
+    -webkit-overflow-scrolling: touch;
+    /* margin-top: 70px; */
+}
+
+/* .d-inline.flex{
+    font-family: 'Neuton', serif;
+} */
+.dataCon{
+    display: flex;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+}
+.servergroup {
+    /* height: auto;
+    width: 300px; */
+    flex: 1 60 px;
+    padding: 5 px;
+    flex-flow: row wrap;
+    /* display: flex ;  */
+}
+
+.usergroup {
+    /* height: auto;
+    width: 300px; */
+    flex: 1 1 5px;
+    margin: 0 5px;
+     /* flex: 1 1 auto;
+    display: flex ;  */
+     /* flex:  50px;  */
+     /* display: flex;  */
+    /* flex-flow: column; */
+    align-items: flex-start;
+    padding: 5px;
+    
+    /* justify-content: space-around; */
+    /* position: -webkit-sticky; */
+    /* position: absolute; */
+    /* top: 20px; */
+}
+
+.forvue-btn {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 45px;
+    min-width: 200px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 35px;
+    padding-right:30px;
+    background: #ff5c5a;
+    color:white;
+    font-size:20px;
+
+
+}
+
+.forvue-btn:last-of-type {
+    margin-right: 0;
+}
+
+.forvue-btn:after{
+    position: absolute;
+    right:10px;
+    top:0;
+    width:45px;
+    height:45pc;
+    line-height: 45px;
+    content: "\f1d8";
+    font-family: FontAwesome;
+    background: #ff5c5a;
+    border-radius: 50%;
+    color:white;
+    font-size:22px;
+
+}
+.forvue-btn:hover,.forvue-btn:focus{
+    background: #f33e3b;
+    text-decoration: none;
+}
+
+@keyframes float {
+0%{
+    transform:translateY(0px);
+}10%{
+    transform:translateY(-15px) ;
+}15%{
+    transform:translateY(-35px);
+}20%{
+    transform:translateY(-55px);
+}30%{
+    transform:translateY(-25px);
+    content: "\f3e8";
+}40%{
+    transform:translateY(-10px);
+    content: "\f3e8";
+}45%{
+    transform:translateY(-0px);
+    content: "\f3e8";
+}50%{
+    transform:translateY(-0px);
+    content: "\f3e8";
+}100%{
+    transform:translateY(-0px);
+    content: "\f3e8";
+}
+}
+
+@media(max-width:730px) {
+    .forvue-btn,
+    .forvue-btn:last-of-type {
+       display: block;
+       margin-right: 0;
+       margin-bottom: 20px;
+    }
+ }
+
+.forvue-btn:hover:after {
+    animation:float 3500ms linear infinite;
+    animation-delay: 100ms;
+    background: #f33e3b;
+}
+.myspinner{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100px;
+    height:100px;
+
+}
+.myspinner div{
+    width:20px;
+    height:20px;
+    background: #0077ff;
+    border-radius: 50%;
+    animation: tomyspinner 0.5s cubic-bezier(.19,.57,.3,.98) infinite alternate;
+}
+.myspinner div:nth-child(2){
+    animation-delay:0.1s;
+    opacity:0.8;
+}
+
+.myspinner div:nth-child(3){
+    animation-delay:0.2s;
+    opacity: 0.6;
+}
+
+.myspinner div:nth-child(4){
+    animation-delay:0.3s;
+    opacity: 0.4;
+}
+
+@keyframes tomyspinner {
+    from{transform:translateY(0)}
+    to{transform: translateY(-100px);}
+}
